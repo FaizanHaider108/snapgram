@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { createPost, createUserAccount, deleteSavedPost, getCurrentUser, getRecentPosts, likePost, savePost, signInAccount, signOutAccount } from "../appwrite/api";
 import { INewPost, INewUser } from "@/types";
 import { QUERY_KEYS } from "./QueryKeys";
-import LikedPosts from "@/_root/Pages/LikedPosts";
+
 
 export function useCreateUserAccount() {
     return useMutation({

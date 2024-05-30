@@ -7,7 +7,8 @@ import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "../ui/button";
 
 const LeftSidebar = () => {
-  const { mutate: signOut, isSuccess } = useSignOutAccount();
+  const {mutate: signOut, isSuccess} = useSignOutAccount();
+  
   const { user } = useUserContext();
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -65,12 +66,11 @@ const LeftSidebar = () => {
         </ul>
       </div>
 
-      <Button variant={"ghost"} className="shad-button_ghost">
+      <Button variant={"ghost"} className="shad-button_ghost" onClick={() => signOut()}>
         <img
           src="/assets/icons/logout.svg"
           alt="logout"
-          onClick={() => signOut()}
-        />
+          />
         <p className="small-medium lg:base-medium">Logout</p>
       </Button>
     </nav>
