@@ -25,6 +25,8 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": [ "src/**/*",             // Include TypeScript files in the src directory
+  "netlify/functions/**/*", // Include TypeScript files in the netlify/functions directory
+  "node_modules/@netlify/functions" ],// Include @netlify/functions package (if needed)
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -277,3 +277,17 @@ export async function deleteSavedPost(savedRecordId: string){
    console.log(error)
   } 
  }
+
+ fetch('/.netlify/functions/appwrite-proxy', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    email: 'fiver1faizan@gmail.com',
+    password: '61b2cad8',
+  }),
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
