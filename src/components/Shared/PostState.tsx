@@ -1,4 +1,3 @@
-import { useUserContext } from "@/context/AuthContext";
 import {
   useDeleteSavedPost,
   useGetCurrentUser,
@@ -7,7 +6,7 @@ import {
 } from "@/lib/reactQuery/quiriesAndMutations";
 import { checkIsLiked } from "@/lib/utils";
 import { Models } from "appwrite";
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 
 type PostStatesProps = {
   post: Models.Document;
