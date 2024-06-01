@@ -7,6 +7,7 @@
 @layer base {
   * {
     @apply box-border list-none p-0 m-0 scroll-smooth;
+    @apply scroll-auto
   }
 
   body {
@@ -221,6 +222,12 @@
   .leftsidebar {
     @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] bg-dark-2;
   }
+
+  .rightsidebar{
+    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[170px] bg-dark-2 items-center custom-scrollbar;
+
+  }
+
 
   .leftsidebar-link {
     @apply rounded-lg base-medium hover:bg-primary-500 transition;

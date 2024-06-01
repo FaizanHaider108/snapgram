@@ -443,3 +443,16 @@ export async function getUsers(_limit?:number){
     console.log(error)
   }
 }
+
+export async function getSavedPosts() {
+    try {
+      const savedPosts = await databases.listDocuments(
+        appwriteConfig.databaseId,
+        appwriteConfig.savesCollectionId
+      )
+      if(!savedPosts ) throw Error
+      return savedPosts;
+    } catch (error) {
+      console.log(error)
+    }
+}
